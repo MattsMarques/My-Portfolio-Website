@@ -8,17 +8,16 @@
 </head>
 <body>
     <div class="header">
-        <p>Matheus Marques</p>
+        <a href="#first-section" class="navbar-title">Matheus Marques</a>
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#footer">CONTACT</a></li>
+            <li><a href="#about-me" class="navbar-title">ABOUT ME</a></li>
+            <li><a href="#projects" class="navbar-title">PROJECTS</a></li>
+            <li><a href="#footer" class="navbar-title">CONTACT</a></li>
         </ul>
     </div>
     <div id="first-section">
         <p>Olá! Meu nome é</p>
-        <h1>MATHEUS MARQUES</h1>
+        <h1>MATHEUS<br>MARQUES</h1>
     </div>
     <div id="about-me">
         <img src="/assets/images/matt-perfil.png" alt="Imagem de Matheus Marques">
@@ -44,18 +43,21 @@
         <p>Algumas das minhas melhores habilidades</p>
     </div>
     <div id="career-section">
-        <h1>Minha carreira e experiência</h1>
-
-        <h2>Designer Gráfico</h2>
-        <p>Freelancer</p>
-
-        <h2>ATUAL</h2>
-
-        <p>
-            Nesse período, trabalhei como freelancer para vários clientes, 
-            desenvolvendo interfaces digitais, identidades visuais e materiais gráficos, 
-            aprimorando ativamente minhas habilidades técnicas em multiplas áreas.
-        </p>
+        <div class="career-container">
+            <h1>Minha carreira <br>e experiência</h1>
+            <div class="career-info">
+                <div class="career-role">
+                    <h4>Designer Gráfico</h4>
+                    <h5>Freelancer</h5>
+                </div>
+                <h2>ATUAL</h2>
+            </div>
+            <p>
+                Nesse período, trabalhei como freelancer para vários clientes, 
+                desenvolvendo interfaces digitais, identidades visuais e materiais gráficos, 
+                aprimorando ativamente minhas habilidades técnicas em multiplas áreas.
+            </p>
+        </div>
     </div>
     <div id="projects">
         <h3>Meu trabalho</h3>
@@ -79,15 +81,27 @@
             </div>
             <div class="contact-box">
                 <h4>Redes Sociais</h4>
-                <a class="contact-social" href="">Github</a>
-                <a class="contact-social" href="">Linkedin</a>
-                <a class="contact-social" href="">Instagram</a>
+                <a class="contact-social" href="">Github <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M17 16V7H8v2h5.59l-6.3 6.29 1.42 1.42 6.29-6.3V16z"></path>
+                    </svg></a>
+                <a class="contact-social" href="">Linkedin <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M17 16V7H8v2h5.59l-6.3 6.29 1.42 1.42 6.29-6.3V16z"></path>
+                    </svg></a>
+                <a class="contact-social" href="">Instagram <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M17 16V7H8v2h5.59l-6.3 6.29 1.42 1.42 6.29-6.3V16z"></path>
+                    </svg></a>
+            </div>
+            <div class="contact-box">
+                <h3>Design e desenvolvimento por Matheus Marques</h3>
+                <h5><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M12 2C6.58 2 2 6.58 2 12s4.58 10 10 10 10-4.58 10-10S17.42 2 12 2m0 18c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8-3.66 8-8 8"></path><path d="M12 9c.99 0 1.85.26 2.29.71L15.7 8.3c-1.12-1.12-2.81-1.29-3.71-1.29-2.76 0-5 2.24-5 5s2.24 5 5 5c.9 0 2.58-.17 3.71-1.29l-1.41-1.42c-.44.44-1.3.71-2.29.71-1.63 0-3-1.37-3-3s1.37-3 3-3Z"></path>
+                    </svg>2026</h5>      
             </div>
         </div>
-
-        <h3>Design e desenvolvimento por Matheus Marques</h3>
-        
-        <h5>2026</h5>
     </div>
     <script src="/js/script.js"></script>
 </body>
