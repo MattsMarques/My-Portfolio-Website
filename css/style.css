@@ -46,6 +46,11 @@ body{
     background: linear-gradient(black, transparent)
 }
 
+.header ul{
+    align-items: center;
+    align-content: center;
+}
+
 .header li{
     display: inline-block;
     padding: 0px 40px;
@@ -53,7 +58,9 @@ body{
 
 .header a{
     text-decoration: inherit;
-    font-family: Switzer-Semibold;
+    font-family: 'Switzer-SemiBold';
+    text-transform: uppercase;
+
     transition: all .3s ease 0s;
 }
 
@@ -65,7 +72,7 @@ body{
 .header .navbar-title{
     font-family: 'ThunderSemBd';
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .language-toggle{
