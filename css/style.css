@@ -38,14 +38,13 @@ body{
 }
 
 /*navbar*/
-.header{
+nav{
     display: flex;
     width: 100%;
     justify-content:space-between;
     align-items: center;
     position: fixed;
     padding: 35px 50px;
-    
     z-index: 9999;
 }
 
@@ -60,17 +59,17 @@ body{
     left: 0;
 }
 
-.header ul{
+nav ul{
+    display: flex;
     align-items: center;
     align-content: center;
 }
 
-.header li{
-    display: inline-block;
-    padding: 0px 40px;
+nav li{
+    padding: 0px 2.5rem;
 }
 
-.header a{
+nav a{
     text-decoration: inherit;
     font-family: 'Switzer';
     text-transform: uppercase;
@@ -78,12 +77,12 @@ body{
     transition: var(--default-transition);
 }
 
-.header a:hover{
+nav a:hover{
     color: var(--primary-color);
     text-decoration: underline;
 }
 
-.header .navbar-title{
+nav .navbar-title{
     font-family: 'ThunderSemBd';
     text-transform: uppercase;
     font-size: 32px;
@@ -97,12 +96,112 @@ body{
     padding: .3rem;
     cursor: pointer;
     font-size: .75rem;
-    transition: all .3s ease 0s;
+    transition: var(--default-transition);
 }
 
 .language-toggle:hover{
     transform: translateY(-4px);
     background-color: #ffffff50;
+}
+
+#open-navbar-button{
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    background: none;
+    border: none;
+    padding: 0px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-navbar-button{
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .nav{
+        z-index: 99;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: -100%;
+        right: 0;
+        height: fit-content;
+        z-index: -1;
+        border-bottom:1px solid #ffffff50;
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 1rem;
+        margin-top: 4rem;
+        transition: var(--default-transition);
+    }
+
+    .nav-menu.show{
+        top:0;
+    }
+
+    nav ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+
+    nav #nav-top{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .nav-fade{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        pointer-events: none;
+        z-index: 99;
+        left: 0;
+    }
+
+    #open-navbar-button{
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        background: none;
+        border: none;
+        padding: 0px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    #close-navbar-button{
+        width: 2rem;
+        height: 2rem;
+        background: none;
+        display: block;
+        border: none;
+        padding: 0px;
+        cursor: pointer;
+    }
+
 }
 
 /*Home Section*/
@@ -177,6 +276,12 @@ body{
     gap: 16px;
 }
 
+@media screen and (max-width: 800px) {
+    .about-container{
+        flex-direction: column;
+    }
+}
+
 /*Skills Section*/
 #best-skills{
     display: flex;
@@ -196,7 +301,10 @@ body{
 }
 
 .skill-icon{
-    width: 32px;
+    width: auto;
+    height: 32px;
+    color: white;
+    fill: white;
 }
 
 .carousel{
@@ -204,7 +312,8 @@ body{
     display: flex;
     overflow-x: auto;
     width: 100%;
-    
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .carousel::-webkit-scrollbar{
@@ -215,9 +324,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     padding-left: 20px;
-    animation: spin 15s infinite linear;
+    animation: spin 30s infinite linear;
 }
 
 .skill-card{
@@ -242,6 +352,17 @@ body{
 @keyframes spin {
     from {translate: 0;}
     to {translate: -100%;}
+}
+
+@media screen and (max-width: 800px) {
+    .skill-card{
+        flex: 0 0 9rem;
+        height: 4rem;
+    }
+
+    .skill-card p{
+        font-size: 20px;
+    }
 }
 
 /*Career Section*/
@@ -317,6 +438,52 @@ body{
     text-transform: uppercase;
     color: var(--secondary-color);
 }
+
+
+@media screen and (max-width: 800px){
+    .career-box{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #ffffff40;
+        gap: 4rem;
+    }
+
+    .career-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .career-info h2{
+        font-family: 'ThunderLight';
+        letter-spacing: 1px;
+        font-size: 52px;
+    }
+
+    .career-info h4{
+        font-family: 'ThunderLight';
+        font-size: 32px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .career-info h5{
+        font-size: 20px;
+        text-align: left;
+        font-family: 'ThunderExtLt';
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    .career-box p{
+        width: 100%;
+    }
+}
+
 
 /*Projects Section*/
 #projects h2{
@@ -515,5 +682,10 @@ body{
     
 }
 
-
+@media screen and (max-width: 800px) {
+    .contact-flex{
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
 
