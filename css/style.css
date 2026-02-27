@@ -37,13 +37,20 @@ body{
     font-family: 'Switzer-Regular';
 }
 
+@media screen and (max-width: 800px){
+    body{
+        padding: 0px
+    }
+}
+
 /*navbar*/
 nav{
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    justify-content:space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     padding: 35px 50px;
     z-index: 9999;
 }
@@ -63,6 +70,12 @@ nav ul{
     display: flex;
     align-items: center;
     align-content: center;
+}
+
+nav .nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav li{
@@ -101,7 +114,7 @@ nav .navbar-title{
 
 .language-toggle:hover{
     transform: translateY(-4px);
-    background-color: #ffffff50;
+    background-color: #383838;
 }
 
 #open-navbar-button{
@@ -207,7 +220,7 @@ nav .navbar-title{
 /*Home Section*/
 #first-section{
     width: 100%;
-    padding: 400px;
+    margin: 400px 0;
     text-align: center;
 }
 
@@ -355,6 +368,10 @@ nav .navbar-title{
 }
 
 @media screen and (max-width: 800px) {
+    #best-skills{
+        padding: 0 30px;
+    }
+
     .skill-card{
         flex: 0 0 9rem;
         height: 4rem;
@@ -441,6 +458,9 @@ nav .navbar-title{
 
 
 @media screen and (max-width: 800px){
+    .career-container{
+        padding: 0 30px;
+    }
     .career-box{
         display: flex;
         flex-direction: column;
@@ -486,13 +506,17 @@ nav .navbar-title{
 
 
 /*Projects Section*/
+.project-section-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 120px 80px 120px;
+}
+
 #projects h2{
     font-family: 'ThunderLight';
     font-size: 70px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 80px;
-    margin-left: 120px;
 }
 
 #projects span{
@@ -501,12 +525,44 @@ nav .navbar-title{
     color: transparent;
 }
 
+.carousel-btns{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+}
+
+.carousel-btns button{
+    background-color: #000000;
+    color: white;
+    border: 1px solid #ffffff50;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: .75rem;
+    transition: all 0.2s ease;
+}
+
+.carousel-btns button:hover{
+    background-color: #383838;
+}
+
+.carousel-btns button:active{
+    background-color: var(--primary-color);
+    transform: scale(0.95)
+}
+
 .project-container{
     display: flex;
     flex-direction: row;
     margin-bottom: 80px;
     border-top: 1px solid #ffffff40;
     border-bottom: 1px solid #ffffff40;
+    overflow-x: auto;
+    cursor: grab;
+}
+
+.project-container::-webkit-scrollbar{
+    width: 0;
 }
 
 .project-card{
@@ -601,6 +657,19 @@ nav .navbar-title{
     border-radius: 30px;
 }
 
+@media screen and (max-width: 800px){
+    #projects{
+        width: 100%;
+    }
+    .project-section-header{
+        margin: 0px 30px 20px 30px;
+    }
+
+    .project-card{
+        padding: 30px;
+    }
+}
+
 /*Footer*/
 #footer{
     padding: 0px 120px;
@@ -682,10 +751,35 @@ nav .navbar-title{
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+    #footer{
+        padding: 0 30px;
+    }
     .contact-flex{
         flex-direction: column;
         gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #footer h1{
+        font-size: 40px;
+    }
+    
+    #footer h4{
+        font-size: 16px;
+    }
+    
+    #footer h3{
+        font-size: 24px;
+    }
+    
+    #footer span{
+        color: var(--secondary-color);
+    }
+    
+    #footer h5{
+        font-size: 18px;
     }
 }
 
