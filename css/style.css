@@ -525,6 +525,7 @@ nav .navbar-title{
     color: transparent;
 }
 
+/*botões carousel*/
 .carousel-btns{
     display: flex;
     width: fit-content;
@@ -558,17 +559,21 @@ nav .navbar-title{
     border-top: 1px solid #ffffff40;
     border-bottom: 1px solid #ffffff40;
     overflow-x: auto;
+    scroll-snap-type: mandatory;
     cursor: grab;
+    -webkit-overflow-scrolling: touch;
 }
 
-.project-container::-webkit-scrollbar{
-    width: 0;
+::-webkit-scrollbar {
+    display: none;
 }
 
 .project-card{
     padding: 120px;
     border-right: 1px solid #ffffff40;
     width: fit-content;
+    float: none;
+    display: inline-block;
 }
 
 .project-image{
