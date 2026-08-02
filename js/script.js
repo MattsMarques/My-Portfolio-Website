@@ -7,3 +7,9 @@ function openNavbar(){
 function closeNavbar(){
     navmenu.classList.remove('show')
 }
+
+const container = document.querySelector(".project-container")
+
+window.onscroll = () => {
+    container.style.left = `${-window.scrollY}px`
+}
